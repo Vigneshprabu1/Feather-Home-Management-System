@@ -1,0 +1,166 @@
+<%@ page session="true"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.io.* "%>
+<%@ page session="true"%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Home Management System | Milk & NewsPaper</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+
+</head>
+<body>
+<!------MENU SECTION START-->
+<div class="navbar navbar-inverse set-radius-zero" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" >
+
+                    <img src="assets/img/logo.png" />
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!-- LOGO HEADER END-->
+        <section class="menu-section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">                        
+                          
+                            <li><a href="logout.jsp">Logout</a></li>
+                          
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<!-- MENU SECTION END-->
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row pad-botm">
+                <div class="col-md-12">
+                
+                </div>
+
+            </div>
+        <div class="row">
+           
+        <div class="col-md-9 col-md-offset-1">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Milk & News Paper
+                </div>
+                <div class="panel-body">
+                    <form name="signup" method="post" action="MilkUpdate.jsp" >
+                        <div class="form-group">
+                            <label>FHome_Number</label>
+                            <input class="form-control" type="text" name="fullanme" autocomplete="off" required />
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>House Number</label>
+                            <input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>House Type</label>
+                            <select name="house_type" class="form-control">
+                                <option value="2BHK">2 BHK</option>
+                                <option value="3BHK">3 BHK</option>
+                                <option value="4BHK">4 BHK</option>
+                                <option value="Others">Others (i,e) Villa,Row,Flat</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>House Members(Count)</label>
+                            <input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Rent/Sales Amount</label>&nbsp;
+                            <input type="radio" name="amount" value="rent" checked> Rent &nbsp;
+                            <input type="radio" name="amount" value="sales"> Sales
+                            <input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
+                        </div>
+                                        
+                        <div class="form-group">
+                            <label>Email id</label>
+                            <input class="form-control" type="email" name="email" id="emailid" onBlur="checkAvailability()"  autocomplete="off" required  />
+                            <span id="user-availability-status" style="font-size:12px;"></span> 
+                        </div>
+
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input class="form-control" type="password" name="password" autocomplete="off" required  />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Confirm Password </label>
+                            <input class="form-control"  type="password" name="confirmpassword" autocomplete="off" required  />
+                        </div> 
+
+                        <div class="form-group">
+                            <label>Services Required </label><br>
+                            <input  type="checkbox" name="services" value="milk" checked> Milk
+                            <input  type="checkbox" name="services" value="water"> Water
+                            <input  type="checkbox" name="services" value="newspaper"> Newspaper
+                        </div> 
+
+                        <center><button type="submit" name="signup" class="btn btn-info" id="submit">Register Now </button></center>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+     <!-- CONTENT-WRAPPER SECTION END-->
+     <footer style="background-color: white">
+        <div class="col-md-12">
+            <br>
+            &copy; 2018 Feather Home Management System <br><br>
+        </div>
+</footer>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

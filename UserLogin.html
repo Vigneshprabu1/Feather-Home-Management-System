@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home Management System | User Login</title>
+
+    <link rel="stylesheet" href="assets/demo.css">
+    <link rel="stylesheet" href="assets/form-login.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <img style="margin-top: 30px" src="assets/img/logo.png" /><br>
+    <ul class="nav navbar-nav">
+        <li><a href="UserRegister.jsp">User Signup</a></li>
+        <li><a href="UserLogin.html" class="active">User Login</a></li>
+        <li><a href="AdminLogin.html">Admin Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="main-content">
+
+        <!-- You only need this form and the form-login.css -->
+
+        <form class="form-login" method="post" action="ValidateToEnter.jsp">
+
+            <div class="form-log-in-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>User Login</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="userid">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="password">
+                        </label>
+                    </div>
+
+                    <div style="margin-left: 220px; margin-bottom: 70px" class="form-row">
+                        <button type="submit">Log in</button>
+                    </div>               
+
+                <a href="forgotpassword.html" class="form-forgotten-password">Forgot password &middot;</a>
+                <a href="UserRegister.jsp" class="form-create-an-account">Create an account &rarr;</a>
+                </div>
+            </div>
+
+            
+
+        </form>
+
+    </div>
+    <!-- CONTENT-WRAPPER SECTION END-->
+    <footer style="background-color: white">
+        <div class="col-md-12">
+            <br>
+            &copy; 2018 Feather Home Management System <br><br>
+        </div>
+</footer>
+</body>
+
+</html>
